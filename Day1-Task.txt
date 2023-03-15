@@ -1,0 +1,144 @@
+1. Write a blog on Difference between HTTP1.1 vs HTTP2
+
+                             HTTP
+
+HTTP-Hyper Text Trasfer Protocol.HTTPis the set of rules for  transfering files.
+such as test,image,video,audio and other mulltimedia files.
+HTTP is an application protocol that runs on top of the TCP/IP protocols.                                          
+It is used to client-sever communication.
+The browser builds an HTTP request and sends it to the Internet 
+Protocol address (IP address) indicated by the URL.
+
+                             How HTTP WORKS?
+
+User send request of image data to the server.
+Server response ang  give back the image data to the user on the screen.
+Request and Responce are loaded in the web page.
+That web page have many links.
+
+                            HTTP1.1
+HTTP/1.1 It is developed by Timothy Berners-Lee in 1989 as a 
+communication for the world wide web.
+several requests & responses are merged in a single connection. 
+These are the drawbacks ofHTTP1.1 
+HTTP/1.1 transfer all the requests & responses in the plain text
+message form.line blocking in which TCP connection is blocked
+all other requests until the response does not receive. 
+All the information related to the header file 
+repeated in every request.
+
+                          HTTP 2
+HTTP/2 was developed over the SPDY protocol.
+HTTP/2 works on the binary framing layer instead of textual 
+that converts all the messages in binary format. 
+it works on fully multiplexed that is one TCP connection.
+It is used for multiple requests.
+
+
+HTTP/1.1 vs. HTTP/2:  differences
+
+                        COMPRESSION:
+  
+ HTTP/2 is compressing more range of different headers,
+caching directives and client information..
+But HTTP/1.1 does not compress headers by default.
+
+                      PERFORMANCE
+
+Many of the new features in HTTP/2 
+improving performance for the end-user.
+HTTP/1.1 does not have these advanced features.
+
+             
+   
+                          
+                      SECURITY
+
+The binary format used by HTTP/2, there is no longer a 
+risk with so-called response splitting attacks 
+that are possible with HTTP/1.1.
+
+                          
+                      DELIVERY MODELS
+
+The HTTP/1.1 protocol delivers responses based on a single request, 
+HTTP/2 uses multiplexing and server push features to increase the delivery performance.
+                          
+            
+                         
+                 MULTIPLEXING
+
+Can be used to send multiple requests and receive 
+multiple responses IN HTTP/2.
+HTTP/1.1 does not support multiplexing.
+
+
+              
+
+
+
+
+2.Write a blog about objects and its internal representation in Javascript
+
+
+                  OBJECTS:
+
+Objects is a key and value pairs
+Objects is a collection of values.
+This values are Primitive or Reference values
+This values idetifiers name is properties.
+
+       There are three ways to create odjects.
+
+1. Object literal
+2. Creating instance of Object directly
+3. Using an Object constructor.
+
+               1. Object literal:
+
+var obj={name:"sree",id:23451; age:25;}
+console.log(obj);
+Property and value is separated by :(colon)
+
+
+                2. Creating instance of Object directly
+
+var objName=new Object();
+new keyword is used to create object directly.
+
+var stu=new Object();
+stu.name="sree";
+stu.id=23451;
+stu.age=25;
+console.log(stu);
+
+                  3. Using an Object constructor.
+
+To create function with arguments.
+Every argument value can be assigned in the current object by using THIS keyword.
+
+function stu(name,id,age){
+this.name=name;
+this.id=id;
+this.age=age;
+}
+s=new stu(23451,"sree", 25);
+console.log(s);
+
+
+                      Defining method in Object
+
+
+function stu(name,id,age){
+this.name=name;
+this.id=id;
+this.age=age;
+
+this.changeName=changeName;
+function changeName(otherName){
+this.name=otherName;
+}
+}
+s=new stu("brindha",23451,25);
+console.log(s);
+
